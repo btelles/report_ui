@@ -1,9 +1,24 @@
 # This file is copied to ~/spec when you run 'ruby script/generate rspec'
 # from the project root directory.
 ENV["RAILS_ENV"] ||= 'test'
-require File.expand_path("../../config/environment", __FILE__)
+ENV['RAILS_ROOT'] ||= File.dirname(__FILE__) + '/../../../..'
+
+require File.expand_path(File.join(ENV['RAILS_ROOT'], 'config/environment'))
+
+
 require 'rspec/rails'
 
+def load_schema
+  config = YAML::load(IO.read(File.dirname(__FILE__) + '/database.yml'))
+  ActiveRecord::Base.logger = Logger.new(File.dirname(__FILE__) + '/debug.log')
+  db_adapter = 'sqlite3'
+  ActiveRecord::Base.establish_connection(config[db_adapter])
+  load(File.dirname(__FILE__) + '/schema.rb')
+  require File.dirname(__FILE__) + '/../rails/init'
+  Dir.glob('support/*').each do |file|
+    require "support/#{file}"
+  end
+end
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
