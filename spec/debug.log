@@ -190,3 +190,1047 @@ SQLite3::SQLException: table "articles" already exists: CREATE TABLE "articles" 
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 
   [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[36mSQL (13.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (78.0ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (58.1ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (91.0ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (66.5ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[36mSQL (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (78.7ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (58.0ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (57.0ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (58.1ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (99.1ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (49.8ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (107.4ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (66.5ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (91.1ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (84.1ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (57.8ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (99.1ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (66.3ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+SQLite3::SQLException: table "reports" already exists: CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (133.3ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (66.2ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (124.0ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (58.1ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (98.9ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (58.0ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (66.0ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (82.9ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (99.1ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (66.3ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (57.4ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (49.8ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (79.7ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (66.2ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (65.7ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (49.8ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (74.0ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (66.3ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mReport Load (0.0ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (92.5ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (66.1ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (99.4ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (66.1ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (74.1ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (72.3ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mReport Load (0.0ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'Report With Last Name Smith', 'People.where(:last_name => ''smith'')')[0m
+  [1m[35mReport Load (0.3ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-01 19:29:35.661164', 'Smith', 'Bob')[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (81.4ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (65.2ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (115.6ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (58.0ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (75.2ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (83.1ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mReport Load (0.0ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (111.2ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (108.0ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (82.3ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (66.3ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (107.4ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (62.4ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (100.7ms)[0m  CREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (70.5ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (67.4ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (73.0ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (66.3ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (83.7ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (83.0ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (99.0ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (83.0ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[36mSQL (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (69.6ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (91.9ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (90.0ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (51.6ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (106.8ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (74.7ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (115.7ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (74.6ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[36mSQL (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (86.0ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (82.9ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (82.4ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (65.1ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (91.7ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (66.2ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (82.4ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (74.8ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (120.3ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (57.7ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (82.5ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (53.3ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (88.6ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (74.6ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (107.3ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (83.0ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (12.6ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (80.4ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (58.1ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (90.8ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (68.9ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (98.3ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (83.0ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (99.1ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (58.0ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.0ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (102.3ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (66.3ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (90.8ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (66.4ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (117.2ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (74.7ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (90.7ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (91.4ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.0ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[36mSQL (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (100.5ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (66.3ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (74.0ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (66.4ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (108.8ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (91.4ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (107.4ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (74.7ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.0ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (89.0ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (74.6ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (107.4ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (58.1ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (66.6ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (83.0ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (99.0ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (74.7ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.1ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'some_report', 'People.where(:last_name => ''smith'')')
+  [1m[36mReport Load (0.2ms)[0m  [1mSELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (83.4ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (81.2ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (74.0ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (87.3ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (87.8ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (83.1ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (99.1ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (91.4ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.0ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'some_report', 'People.where(:last_name => ''smith'')')
+  [1m[36mReport Load (0.1ms)[0m  [1mSELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (115.9ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (58.0ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (82.3ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (74.8ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (100.7ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (73.3ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (100.4ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (66.3ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.0ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'some_report', 'People.where(:last_name => ''smith'')')
+  [1m[36mReport Load (0.1ms)[0m  [1mSELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (99.0ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (66.4ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (99.4ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (66.4ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (89.5ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (74.7ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (116.1ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (66.4ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (95.4ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (83.0ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (74.1ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (66.5ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (92.3ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (66.4ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (91.1ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (66.4ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.0ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'some_report', 'People.where(:last_name => ''smith'')')
+  [1m[36mReport Load (0.1ms)[0m  [1mSELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (114.2ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (83.2ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (112.3ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (83.2ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (96.4ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (91.4ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (124.2ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (74.8ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (94.9ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (66.4ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (90.9ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (55.0ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (87.2ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (74.8ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (107.6ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (66.5ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[36mSQL (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (96.6ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (57.9ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (99.2ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (74.8ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (82.6ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (74.8ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (116.0ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (76.1ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[36mSQL (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (87.3ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (74.7ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (90.9ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (58.2ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (65.9ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (66.5ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (75.7ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (66.4ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[36mSQL (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (114.2ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (74.7ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (91.1ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (74.8ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (66.1ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (66.5ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (91.2ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (74.8ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.0ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'some_report', 'People.where(:last_name => ''smith'')')
+  [1m[36mReport Load (0.2ms)[0m  [1mSELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1[0m
+  [1m[35mReport Load (0.2ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (84.8ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (74.7ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (99.2ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (83.1ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (75.7ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (74.7ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (107.5ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (66.4ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.0ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'some_report', 'People.where(:last_name => ''smith'')')
+  [1m[36mReport Load (0.2ms)[0m  [1mSELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1[0m
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (107.6ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (49.7ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (97.1ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (60.2ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (75.5ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (74.8ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (84.6ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (49.8ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.0ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'some_report', 'People.where(:last_name => ''smith'')')
+  [1m[36mReport Load (0.1ms)[0m  [1mSELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1[0m
+  [1m[35mHello Load (0.1ms)[0m  SELECT "hellos".* FROM "hellos"
+SQLite3::SQLException: no such table: hellos: SELECT     "hellos".* FROM       "hellos"
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (121.4ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (62.8ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (99.1ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (49.7ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (79.0ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (66.4ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (102.5ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (49.7ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.0ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'some_report', 'People.where(:last_name => ''smith'')')
+  [1m[36mReport Load (0.1ms)[0m  [1mSELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1[0m
+  [1m[35mHello Load (0.1ms)[0m  SELECT "hellos".* FROM "hellos"
+SQLite3::SQLException: no such table: hellos: SELECT     "hellos".* FROM       "hellos"
+  [1m[36mSQL (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (88.6ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (66.4ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (71.3ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (58.0ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (70.2ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (74.7ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (82.5ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (49.8ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.1ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'some_report', 'People.where(:last_name => ''smith'')')
+  [1m[36mReport Load (0.2ms)[0m  [1mSELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1[0m
+  [1m[35mHello Load (0.2ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (79.9ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (66.3ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (82.6ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (89.0ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (102.9ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (73.3ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (74.2ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (66.4ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.0ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'some_report', 'People.where(:last_name => ''smith'')')
+  [1m[36mReport Load (0.1ms)[0m  [1mSELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1[0m
+  [1m[35mHello Load (0.1ms)[0m  SELECT "reports".* FROM "reports"

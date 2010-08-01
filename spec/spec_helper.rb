@@ -14,13 +14,14 @@ def load_schema
   db_adapter = 'sqlite3'
   ActiveRecord::Base.establish_connection(config[db_adapter])
   load(File.dirname(__FILE__) + '/schema.rb')
-  require File.dirname(__FILE__) + '/../rails/init'
+  require File.dirname(__FILE__) + '/../init'
   Dir.glob('support/*').each do |file|
     require "support/#{file}"
   end
 end
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
+load_schema
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 
 RSpec.configure do |config|
