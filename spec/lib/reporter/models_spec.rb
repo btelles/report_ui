@@ -4,11 +4,6 @@ describe "specifying that a model is a reporter" do
   describe "with the controller option" do
     it 'specified, assigns the given controller' do
       Report.make(:name => 'some_report')
-      class HeiController < ActionController::Base; end
-      class Hello < ActiveRecord::Base
-        set_table_name 'reports'
-        reporter :controller => "HeiController"
-      end
       Hello.reporter_controller.should == HeiController
     end
     it 'not specified, guesses the controller' do
@@ -21,7 +16,7 @@ describe "specifying that a model is a reporter" do
                          :query => "Person.where(\"last_name = 'smith'\")")
     end
     it "controller action for every record" do
-      ReportController.instance_methods.should include(:some_report)
+      ReportController.instance_methods.sort.should include(:some_report)
     end
     it "route for every record"
 

@@ -2,11 +2,9 @@
 # from the project root directory.
 ENV["RAILS_ENV"] ||= 'test'
 ENV['RAILS_ROOT'] ||= File.dirname(__FILE__) + '/../../../..'
+require 'ruby-debug'
 
 require File.expand_path(File.join(ENV['RAILS_ROOT'], 'config/environment'))
-
-
-require 'rspec/rails'
 
 def load_schema
   config = YAML::load(IO.read(File.dirname(__FILE__) + '/database.yml'))
@@ -15,14 +13,12 @@ def load_schema
   ActiveRecord::Base.establish_connection(config[db_adapter])
   load(File.dirname(__FILE__) + '/schema.rb')
   require File.dirname(__FILE__) + '/../init'
-  Dir.glob('support/*').each do |file|
-    require "support/#{file}"
-  end
 end
-# Requires supporting files with custom matchers and macros, etc,
-# in ./support/ and its subdirectories.
+
 load_schema
-Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
+require 'rspec/rails'
+require 'support/models'
+require 'support/blueprints'
 
 RSpec.configure do |config|
   # == Mock Framework
