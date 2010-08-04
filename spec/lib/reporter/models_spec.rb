@@ -16,10 +16,29 @@ describe "specifying that a model is a reporter" do
                          :query => "Person.where(\"last_name = 'smith'\")")
     end
     it "controller action for every record" do
-      ReportController.instance_methods.sort.should include(:some_report)
+      ReportController.instance_methods.sort.should include(:report_some_report)
     end
     it "route for every record"
 
+  end
+  describe "result_data" do
+    it "executes Ruby and returns an array of AR objects" do
+      person = Person.make(:last_name => 'smith')
+      report = Report.make(:language => 'ruby',
+                           :query => 'Person.where("last_name = \'smith\'")')
+
+      report.report_data.should have(1).record
+      report.report_data[0].should == person
+    end
+    it "executes SQL and returns an array of AR objects" do
+      person = Person.make(:last_name => 'smith')
+      report = Report.make(:language => 'sql',
+                           :query => "select * from people where last_name = 'smith'")
+
+      report.report_data.should have(1).record
+      report.report_data[0].last_name.should == 'smith'
+      report.report_data[0].id.should == person.id
+    end
   end
   describe "the controller's action" do
     it "returns report_data"

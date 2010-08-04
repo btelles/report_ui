@@ -4,7 +4,7 @@ module Reporter
 
     module InstanceMethods
       def method_name
-        @method_name ||= name.underscore.gsub(/ /, '_')
+        @method_name ||= "report_#{name.underscore.gsub(/ /, '_')}".to_sym
       end
 
       def regenerate_report
@@ -12,15 +12,19 @@ module Reporter
         #define_route
       end
 
+      def report_data
+        case language
+          when 'ruby'
+            eval(query)
+          when 'sql'
+            self.class.find_by_sql(query)
+        end
+      end
+
       private 
 
       def define_controller_action
-        report = self
-        self.class.reporter_controller.class_eval do
-          define_method(report.method_name.to_sym) do
-
-          end
-        end
+        self.class.reporter_controller.define_report_action(self)
       end
     end
 
