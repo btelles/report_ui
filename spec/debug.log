@@ -1694,3 +1694,831 @@ SQLite3::SQLException: no such table: hellos: SELECT     "hellos".* FROM       "
   [1m[35mHello Load (0.2ms)[0m  SELECT "reports".* FROM "reports"
   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'Some Report', 'Person.where("last_name = ''smith''")')[0m
   [1m[35mReport Load (0.2ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (73.7ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (32.4ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (57.4ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (49.7ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (57.4ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (58.0ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (40.6ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (82.9ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.0ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'some_report', 'People.where(:last_name => ''smith'')')
+  [1m[36mReport Load (0.1ms)[0m  [1mSELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1[0m
+  [1m[35mHello Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'Some Report', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (117.0ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (57.7ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (74.2ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (58.2ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (99.2ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (58.0ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (107.4ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (91.3ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.1ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mHello Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'some_report', 'People.where(:last_name => ''smith'')')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'Some Report', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 00:33:30.226996', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES ('ruby', 'Report With Last Name Smith', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT "people".* FROM "people" WHERE (last_name = 'smith')[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people" WHERE (last_name = 'smith')
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 00:33:30.251877', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES ('sql', 'Report With Last Name Smith', 'select * from people where last_name = ''smith''')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mReport Load (0.1ms)[0m  [1mselect * from people where last_name = 'smith'[0m
+  [1m[35mReport Load (0.1ms)[0m  select * from people where last_name = 'smith'
+  [1m[36mReport Load (0.1ms)[0m  [1mselect * from people where last_name = 'smith'[0m
+  [1m[36mSQL (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (119.5ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (66.5ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (90.4ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (41.3ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (99.3ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (58.0ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (82.4ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (49.7ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.1ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mHello Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'some_report', 'People.where(:last_name => ''smith'')')[0m
+  [1m[35mReport Load (0.2ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'Some Report', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.2ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 00:37:37.904428', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES ('ruby', 'Report With Last Name Smith', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT "people".* FROM "people" WHERE (last_name = 'smith')[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people" WHERE (last_name = 'smith')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 00:37:37.922490', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES ('sql', 'Report With Last Name Smith', 'select * from people where last_name = ''smith''')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mReport Load (0.2ms)[0m  [1mselect * from people where last_name = 'smith'[0m
+  [1m[35mReport Load (0.2ms)[0m  select * from people where last_name = 'smith'
+  [1m[36mReport Load (0.2ms)[0m  [1mselect * from people where last_name = 'smith'[0m
+  [1m[36mSQL (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (85.1ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (58.0ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (49.0ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (58.1ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (82.4ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (58.0ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (115.6ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (33.0ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.1ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mHello Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'some_report', 'People.where(:last_name => ''smith'')')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'Some Report', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 00:38:07.341667', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES ('ruby', 'Report With Last Name Smith', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT "people".* FROM "people" WHERE (last_name = 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE (last_name = 'smith')
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 00:38:07.353916', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES ('sql', 'Report With Last Name Smith', 'select * from people where last_name = ''smith''')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mReport Load (0.1ms)[0m  [1mselect * from people where last_name = 'smith'[0m
+  [1m[35mReport Load (0.1ms)[0m  select * from people where last_name = 'smith'
+  [1m[36mSQL (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (95.4ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (66.3ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (98.7ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (41.4ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (74.0ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (58.1ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (90.8ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (41.4ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.1ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mHello Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'some_report', 'People.where(:last_name => ''smith'')')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'Some Report', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 00:38:12.372175', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES ('ruby', 'Report With Last Name Smith', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT "people".* FROM "people" WHERE (last_name = 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE (last_name = 'smith')
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 00:38:12.384554', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES ('sql', 'Report With Last Name Smith', 'select * from people where last_name = ''smith''')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mReport Load (0.1ms)[0m  [1mselect * from people where last_name = 'smith'[0m
+  [1m[35mReport Load (0.1ms)[0m  select * from people where last_name = 'smith'
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (104.4ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (74.6ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (107.4ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (66.3ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (90.6ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (66.4ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (107.4ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (41.3ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.0ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mHello Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'some_report', 'People.where(:last_name => ''smith'')')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'Some Report', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.2ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'Some Report', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 02:48:22.806936', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES ('ruby', 'Report With Last Name Smith', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT "people".* FROM "people" WHERE (last_name = 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE (last_name = 'smith')
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 02:48:22.820310', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES ('sql', 'Report With Last Name Smith', 'select * from people where last_name = ''smith''')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mReport Load (0.1ms)[0m  [1mselect * from people where last_name = 'smith'[0m
+  [1m[35mReport Load (0.1ms)[0m  select * from people where last_name = 'smith'
+  [1m[36mSQL (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (107.1ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (58.0ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (107.3ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (58.1ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (82.3ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (58.1ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (32.3ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (58.0ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.0ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mHello Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'some_report', 'People.where(:last_name => ''smith'')')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'Some Report', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'Some Report', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 03:02:45.429257', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES ('ruby', 'Report With Last Name Smith', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT "people".* FROM "people" WHERE (last_name = 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE (last_name = 'smith')
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 03:02:45.441557', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES ('sql', 'Report With Last Name Smith', 'select * from people where last_name = ''smith''')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mReport Load (0.1ms)[0m  [1mselect * from people where last_name = 'smith'[0m
+  [1m[35mReport Load (0.1ms)[0m  select * from people where last_name = 'smith'
+  [1m[36mSQL (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (82.4ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (57.8ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (82.1ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (49.7ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (57.4ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (58.0ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (82.3ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (66.3ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.1ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mHello Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'some_report', 'People.where(:last_name => ''smith'')')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'Some Report', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'Some Report', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 03:02:50.484961', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES ('ruby', 'Report With Last Name Smith', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT "people".* FROM "people" WHERE (last_name = 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE (last_name = 'smith')
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 03:02:50.497704', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES ('sql', 'Report With Last Name Smith', 'select * from people where last_name = ''smith''')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mReport Load (0.1ms)[0m  [1mselect * from people where last_name = 'smith'[0m
+  [1m[35mReport Load (0.1ms)[0m  select * from people where last_name = 'smith'
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (95.7ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (66.3ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (57.4ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (66.3ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (82.5ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (74.7ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (57.4ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (66.4ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.1ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mHello Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'some_report', 'People.where(:last_name => ''smith'')')[0m
+  [1m[35mReport Load (0.2ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 03:11:56.611116', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES ('ruby', 'Report With Last Name Smith', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT "people".* FROM "people" WHERE (last_name = 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE (last_name = 'smith')
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 03:11:56.623189', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES ('sql', 'Report With Last Name Smith', 'select * from people where last_name = ''smith''')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mReport Load (0.1ms)[0m  [1mselect * from people where last_name = 'smith'[0m
+  [1m[35mReport Load (0.1ms)[0m  select * from people where last_name = 'smith'
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (76.2ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (74.6ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (107.1ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (83.2ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (98.9ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (58.1ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (107.2ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (66.3ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.1ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mHello Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (91.0ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (49.5ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (74.1ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (49.7ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (82.4ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (58.0ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (90.8ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (49.8ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.1ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mHello Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (64.8ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (66.2ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (90.9ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (66.4ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (49.0ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (49.8ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (99.0ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (74.6ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.1ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mHello Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (70.1ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (49.7ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (90.8ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (66.4ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (65.8ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (41.4ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (90.8ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (66.4ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.0ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mHello Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (102.0ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (49.6ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (82.2ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (49.8ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (90.9ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (160.9ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (96.1ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (49.7ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.1ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mHello Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'some_report', 'People.where(:last_name => ''smith'')')[0m
+  [1m[35mReport Load (0.2ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 03:20:02.929394', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES ('ruby', 'Report With Last Name Smith', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT "people".* FROM "people" WHERE (last_name = 'smith')[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people" WHERE (last_name = 'smith')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 03:20:02.947560', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES ('sql', 'Report With Last Name Smith', 'select * from people where last_name = ''smith''')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mReport Load (0.2ms)[0m  [1mselect * from people where last_name = 'smith'[0m
+  [1m[35mReport Load (0.1ms)[0m  select * from people where last_name = 'smith'
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 03:20:02.960701', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'Some Report', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.4ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 03:20:03.016118', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'Some Report', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.2ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 03:20:03.024525', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'Some Report', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.2ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (103.4ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (57.9ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (74.0ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (49.7ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (99.0ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (49.7ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (82.4ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (58.0ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.0ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mHello Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'some_report', 'People.where(:last_name => ''smith'')')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 03:20:07.978930', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES ('ruby', 'Report With Last Name Smith', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT "people".* FROM "people" WHERE (last_name = 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE (last_name = 'smith')
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 03:20:07.991041', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES ('sql', 'Report With Last Name Smith', 'select * from people where last_name = ''smith''')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mReport Load (0.1ms)[0m  [1mselect * from people where last_name = 'smith'[0m
+  [1m[35mReport Load (0.1ms)[0m  select * from people where last_name = 'smith'
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 03:20:07.999644', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'Some Report', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 03:20:08.007053', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'Some Report', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 03:20:08.012902', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'Some Report', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (119.0ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (58.0ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (82.4ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (83.1ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (99.0ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (82.9ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (82.4ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (91.4ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.1ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mHello Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 03:24:53.769656', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'Some Report', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 03:24:53.802024', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'Some Report', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (153.6ms)[0m  [1mDROP TABLE "people"[0m
+  [1m[35mSQL (66.3ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "date_of_birth" date, "amount" decimal(10,2)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (98.6ms)[0m  DROP TABLE "articles"
+  [1m[36mSQL (66.4ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (90.6ms)[0m  [1mDROP TABLE "reports"[0m
+  [1m[35mSQL (74.7ms)[0m  CREATE TABLE "reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (90.6ms)[0m  DROP TABLE "temp_reports"
+  [1m[36mSQL (66.4ms)[0m  [1mCREATE TABLE "temp_reports" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "query" text, "language" varchar(255)) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+  [1m[36mReport Load (0.1ms)[0m  [1mSELECT "reports".* FROM "reports"[0m
+  [1m[35mHello Load (0.1ms)[0m  SELECT "reports".* FROM "reports"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'some_report', 'People.where(:last_name => ''smith'')')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 03:27:09.833544', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES ('ruby', 'Report With Last Name Smith', 'Person.where("last_name = ''smith''")')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT "people".* FROM "people" WHERE (last_name = 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE (last_name = 'smith')
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 03:27:09.846088', 'Smith', 'smith')[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES ('sql', 'Report With Last Name Smith', 'select * from people where last_name = ''smith''')[0m
+  [1m[35mReport Load (0.1ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mReport Load (0.1ms)[0m  [1mselect * from people where last_name = 'smith'[0m
+  [1m[35mReport Load (0.1ms)[0m  select * from people where last_name = 'smith'
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reports" ("language", "name", "query") VALUES (NULL, 'Report With Last Name Smith', 'People.where(:last_name => ''smith'')')[0m
+  [1m[35mReport Load (0.2ms)[0m  SELECT "reports".* FROM "reports" WHERE ("reports"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("amount", "date_of_birth", "first_name", "last_name") VALUES (NULL, '2000-08-05 03:27:09.973816', 'Smith', 'Bob')[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people" WHERE ("people"."id" = 1) LIMIT 1

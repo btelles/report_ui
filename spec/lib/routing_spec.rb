@@ -5,6 +5,9 @@ describe "named route report_with_last_name_smith_path" do
     Report.make
     Person.make
   end
+    it "route for every record" do
+      {:get => '/report_some_report'}.should route_to(:controller => 'reports', :action => 'report_some_report')
+    end
   #it "maps /report_with_last_name_smith" do
   #  route_for(:controller => 'reports', :action => 'report_with_last_name_smith').should == '/report_with_last_name_smith'
   #end
