@@ -19,9 +19,16 @@ GEM
     activesupport (3.0.0)
     builder (2.1.2)
     columnize (0.3.1)
+    compass (0.10.5)
+      haml (>= 3.0.4)
+    decent_exposure (1.0.0.rc1)
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    formtastic (1.1.0)
+      actionpack (>= 2.3.0)
+      activesupport (>= 2.3.0)
+      i18n (>= 0.4.0)
     gemcutter (0.6.1)
     git (1.2.5)
     haml (3.0.18)
@@ -65,6 +72,9 @@ DEPENDENCIES
   actionpack (~> 3.0.0)
   activesupport (~> 3.0.0)
   bundler (~> 1.0.0)
+  compass
+  decent_exposure (~> 1.0.0.rc1)
+  formtastic
   haml
   jeweler (~> 1.4.0)
   rspec (~> 2.0.0.rc)
