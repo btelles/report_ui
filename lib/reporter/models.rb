@@ -21,7 +21,7 @@ module Reporter
         end
       end
 
-      private 
+      private
 
       def define_controller_action
         self.class.reporter_controller.define_report_action(self)
