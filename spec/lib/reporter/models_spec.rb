@@ -10,17 +10,6 @@ describe "specifying that a model is a reporter" do
       Report.reporter_controller.should == ReportController
     end
   end
-  describe "generates a " do
-    before do
-      @rep = Report.make(:name => "Some Report",
-                         :query => "Person.where(\"last_name = 'smith'\")")
-    end
-    it "controller action for every record" do
-      ReportController.instance_methods.sort.should include(:report_some_report)
-    end
-    it "route for every record"
-
-  end
   describe "result_data" do
     it "executes Ruby and returns an array of AR objects" do
       person = Person.make(:last_name => 'smith')
