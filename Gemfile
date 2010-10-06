@@ -9,4 +9,5 @@ gem 'haml'
 group :development, :test do 
   gem 'rspec', '~> 2.0.0.rc'
   gem 'rspec-rails', '~> 2.0.0.rc'
+  gem 'ruby-debug'
 end
