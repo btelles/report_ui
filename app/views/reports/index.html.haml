@@ -10,12 +10,12 @@
           %th Description
       %tbody
         -reports.each do |report|
-          %tr(class="#{cycle('odd','even')}")
+          %tr(class="#{cycle('odd','even')}" rel="#{report.id}")
             %td=report.name
             %td=report.description
   -else
     %p There are no canned reports
-  %h2 Custom Reports
+  %h2 Favorite Reports
 
   -if custom_reports.present?
     %table
@@ -32,3 +32,4 @@
     %p There are no custom reports.
 #report_details
   %h2 Report Details
+
