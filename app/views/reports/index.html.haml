@@ -1,1 +1,34 @@
-=@hello
+%h1 Listing reports
+#reports
+  %h2 Canned Reports
+
+  -if reports.present?
+    %table
+      %thead
+        %tr
+          %th Name
+          %th Description
+      %tbody
+        -reports.each do |report|
+          %tr(class="#{cycle('odd','even')}")
+            %td=report.name
+            %td=report.description
+  -else
+    %p There are no canned reports
+  %h2 Custom Reports
+
+  -if custom_reports.present?
+    %table
+      %thead
+        %tr
+          %th Name
+          %th Description
+      %tbody
+        -custom_reports.each do |report|
+          %tr(class="#{cycle('odd','even')}")
+            %td=report.name
+            %td=report.description
+  -else
+    %p There are no custom reports.
+#report_details
+  %h2 Report Details
