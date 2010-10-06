@@ -6,16 +6,18 @@ module NavigationHelpers
   # step definition in web_steps.rb
   #
   #
-  def resource_paths_for(controller_name, page_name)
-    send("#{page_name.gsub(/the|page/, '').strip.gsub(/ /,'_')}_path")
+  def specific_resource_path(page_name)
+    resource_type = page_name.gsub(/^that|\'s page/, '').strip
+
+    send((resource_type+'_path').to_sym, self.instance_variable_get("@#{resource_type}".to_sym))
   end
   def path_to(page_name)
     case page_name
 
     when /the home\s?page/
       '/'
-    when /the(.+)report\s?page/
-      resource_paths_for('reports', page_name)
+    when /that .+\'s page/
+      specific_resource_path(page_name)
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

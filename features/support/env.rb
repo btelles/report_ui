@@ -17,6 +17,7 @@ def load_schema
 end
 
 load_schema
+require File.dirname(__FILE__) + '/blueprints'
 require 'cucumber/formatter/unicode' # Remove this line if you don't want Cucumber Unicode support
 require 'cucumber/rails/world'
 require 'cucumber/rails/active_record'

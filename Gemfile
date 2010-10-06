@@ -18,4 +18,5 @@ group :development, :test do
   gem 'nokogiri'
   gem 'capybara'
   gem 'ruby-debug'
+  gem 'machinist'
 end

@@ -15,11 +15,15 @@ module WithinHelpers
   end
 end
 World(WithinHelpers)
+require File.dirname(__FILE__) + '/mislav_steps'
 
 Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
+Given /^An? existing report with "([^"]*)" "([^"]*)"/ do |property, value|
+  @report = Report.make(property.to_sym => value)
+end
 When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end
