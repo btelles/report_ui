@@ -13,9 +13,11 @@ ActiveRecord::Schema.define(:version => 0) do
   end
 
   create_table :reports, :force => true do |t|
-    t.column :name, :string
-    t.column :query, :text
-    t.column :language, :string
+    t.string :name
+    t.string :description
+    t.string :type
+    t.string :code
+    t.string :columns
   end
   create_table :temp_reports, :force => true do |t|
     t.column :name, :string

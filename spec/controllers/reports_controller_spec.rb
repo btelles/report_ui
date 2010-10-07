@@ -1,4 +1,4 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
-describe "controller methods" do
+describe ReportsController do
 end

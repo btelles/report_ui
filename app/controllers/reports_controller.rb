@@ -8,4 +8,7 @@ class ReportsController < ApplicationController
       []
     end
   end
+
+  def show
+  end
 end

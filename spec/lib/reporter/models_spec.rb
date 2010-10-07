@@ -13,8 +13,8 @@ describe "specifying that a model is a reporter" do
   describe "result_data" do
     it "executes Ruby and returns an array of AR objects" do
       person = Person.make(:last_name => 'smith')
-      report = Report.make(:language => 'ruby',
-                           :query => 'Person.where("last_name = \'smith\'")')
+      report = Report.make(:type => 'ruby',
+                           :code => 'Person.where("last_name = \'smith\'")')
 
       report.report_data.should have(1).record
       report.report_data[0].should == person
@@ -22,23 +22,11 @@ describe "specifying that a model is a reporter" do
 
     it "executes SQL and returns an array of AR objects" do
       person = Person.make(:last_name => 'smith')
-      report = Report.make(:language => 'sql',
-                           :query => "select * from people where last_name = 'smith'")
+      report = Report.make(:type => 'sql',
+                           :code => "select * from people where last_name = 'smith'")
 
       report.report_data.should have(1).record
       report.report_data[0].id.should == person.id
     end
   end
-  describe "the controller's action" do
-    it "returns report_data"
-    it "renders the report's view"
-    it "or the view can be overwritten"
-    it "can be overwritten"
-  end
-end
-
-describe "regenerating reports" do
-  it 'tells each report to create a controller action, and view' do
-  end
-
 end
