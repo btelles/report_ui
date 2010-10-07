@@ -13,20 +13,9 @@ describe "specifying that a model is a reporter" do
   describe "result_data" do
     it "executes Ruby and returns an array of AR objects" do
       person = Person.make(:last_name => 'smith')
-      report = Report.make(:type => 'ruby',
-                           :code => 'Person.where("last_name = \'smith\'")')
-
+      report = Report.make( :code => 'Person.where("last_name = \'smith\'")')
       report.report_data.should have(1).record
       report.report_data[0].should == person
-    end
-
-    it "executes SQL and returns an array of AR objects" do
-      person = Person.make(:last_name => 'smith')
-      report = Report.make(:type => 'sql',
-                           :code => "select * from people where last_name = 'smith'")
-
-      report.report_data.should have(1).record
-      report.report_data[0].id.should == person.id
     end
   end
 end

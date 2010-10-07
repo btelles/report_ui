@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(:version => 0) do
   create_table :reports, :force => true do |t|
     t.string :name
     t.string :description
-    t.string :type
     t.string :code
     t.string :columns
   end
