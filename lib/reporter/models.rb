@@ -13,12 +13,7 @@ module Reporter
       end
 
       def report_data
-        case language
-          when 'ruby'
-            eval(query)
-          when 'sql'
-            self.class.find_by_sql(query)
-        end
+        eval(code)
       end
 
       private

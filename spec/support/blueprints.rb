@@ -2,7 +2,7 @@ require 'machinist/active_record'
 
 Report.blueprint do
   name { "Report With Last Name Smith" }
-  query { "People.where(:last_name => 'smith')" }
+  code { "People.where(:last_name => 'smith')" }
 end
 
 Person.blueprint do

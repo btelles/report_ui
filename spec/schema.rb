@@ -1,5 +1,5 @@
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 1) do
   create_table :people, :force => true do |t|
     t.column :first_name, :string
     t.column :last_name, :string
@@ -17,6 +17,9 @@ ActiveRecord::Schema.define(:version => 0) do
     t.string :description
     t.string :code
     t.string :columns
+    t.string :includes
+    t.string :sorts
+    t.string :filters
   end
   create_table :temp_reports, :force => true do |t|
     t.column :name, :string
