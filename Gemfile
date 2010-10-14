@@ -11,8 +11,8 @@ gem 'meta_search'
 gem 'decent_exposure', '~> 1.0.0.rc1'
 
 group :development, :test do 
-  gem 'rspec', '~> 2.0.0.rc'
-  gem 'rspec-rails', '~> 2.0.0.rc'
+  gem 'rspec', '~> 2.0.0'
+  gem 'rspec-rails', '~> 2.0.0'
   gem 'cucumber'
   gem 'cucumber-rails'
   gem 'nokogiri'
