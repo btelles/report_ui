@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(:version => 1) do
     t.string :name
     t.string :description
     t.string :code
-    t.string :columns
+    t.string :cols
     t.string :includes
     t.string :sorts
     t.string :filters

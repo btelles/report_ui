@@ -19,6 +19,6 @@ module Reporter
   end
 end
 
-ActiveRecord::Base.extend Reporter::Models
+#ActiveRecord::Base.extend Reporter::Models
 ActiveRecord::ConnectionAdapters::Table.send :include, Reporter::Orm::ActiveRecord::Schema
 ActiveRecord::ConnectionAdapters::TableDefinition.send :include, Reporter::Orm::ActiveRecord::Schema

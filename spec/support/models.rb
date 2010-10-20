@@ -6,10 +6,10 @@ class ReportController < ActionController::Base; end
 class Person < ActiveRecord::Base; end
 
 class Report < ActiveRecord::Base
-  reporter
+#  reporter
 end
 
 class Hello < ActiveRecord::Base
-  set_table_name 'reports'
-  reporter :controller => "HeiController"
+#  set_table_name 'reports'
+#  reporter :controller => "HeiController"
 end

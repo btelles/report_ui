@@ -1,5 +1,5 @@
 require 'machinist/active_record'
 
-Report.blueprint do 
-  name { "lorem" }
-end
+#Report.blueprint do 
+#  name { "lorem" }
+#end
