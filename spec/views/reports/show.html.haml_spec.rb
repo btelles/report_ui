@@ -5,6 +5,8 @@ describe "reports/show.html.haml" do
     view.should_receive(:report).at_least(1).and_return(Report.new(:cols => ['hi', 'ho', 'he'],
                   :code => "People.all"))
     render :template => 'reports/show.html.haml'
-
+    rendered.should have_selector('th:contains("hi")')
+    rendered.should have_selector('th:contains("ho")')
+    rendered.should have_selector('th:contains("he")')
   end
 end

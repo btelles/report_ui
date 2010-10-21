@@ -19,6 +19,8 @@ load_schema
 require 'rspec/rails'
 require 'support/models'
 require 'support/blueprints'
+require 'webrat'
+require 'webrat/core/matchers'
 
 RSpec.configure do |config|
   # == Mock Framework
