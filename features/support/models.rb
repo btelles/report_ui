@@ -1,0 +1,1 @@
+../../spec/support/models.rb

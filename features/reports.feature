@@ -1,5 +1,10 @@
 Feature: Manage reports
 
+  Scenario: Viewing a list of reports
+    Given An existing report with "name" "Some report"
+    And I am on the reports page
+    Then I should see "Some report"
+
   Scenario: Creating reports
     Given I am on the new report page
     Then I should see "Creating a new report"
