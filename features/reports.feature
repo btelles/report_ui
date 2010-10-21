@@ -7,7 +7,11 @@ Feature: Manage reports
 
   Scenario: Creating reports
     Given I am on the new report page
-    Then I should see "Creating a new report"
+    Then  I should see "Creating a new report"
+    When  I fill in "name" with "My new report"
+    And   I press "edit" within "columns"
+    And   I press "submit"
+    Then  I should see "You've successfully created a report"
 
   Scenario: Viewing reports
     Given An existing report with "name" "Tommy Test"

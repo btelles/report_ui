@@ -1,12 +1,6 @@
 
-class HeiController < ActionController::Base; end
-
-class ReportController < ActionController::Base; end
-
-class Person < ActiveRecord::Base; end
-
-class Report < ActiveRecord::Base
-#  reporter
+class Person < ActiveRecord::Base;
+  #reportable
 end
 
 class Hello < ActiveRecord::Base
