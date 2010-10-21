@@ -2,7 +2,6 @@ module Reporter
   ReportableModels = []
 
   module Models
-
     def reportable
       ::Reporter::ReportableModels << self
     end

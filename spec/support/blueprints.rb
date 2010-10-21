@@ -1,9 +1,9 @@
 require 'machinist/active_record'
 
 Report.blueprint do
-  name { "Report With Last Name Smith" }
-  code { "People.where(:last_name => 'smith')" }
-  cols { ['name', 'description'] }
+  name         { "Report With Last Name Smith" }
+  code         { "People.where(:last_name => 'smith')" }
+  used_columns { ['name', 'description'] }
 end
 
 Person.blueprint do

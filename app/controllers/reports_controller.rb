@@ -10,6 +10,6 @@ class ReportsController < ApplicationController
   end
 
   def columns
-    @reportable_columns = Reporter::ReportableColumns
+    @reportable_columns = report.reportable_columns
   end
 end

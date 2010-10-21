@@ -1,4 +1,14 @@
 class Report < ActiveRecord::Base
+  serialize :used_columns
+  validates_presence_of :used_columns
+
+  def available_columns
+    ::Reporter::ReportableColumns.inject({}) do |result, model|
+      result.merge(model => model.columns.inject({}) do |model_attrs, attr|
+        model_attrs.merge(attr.name.to_sym => self.used_columns.include?("#{model.name}##{attr.name}"))
+      end)
+    end
+  end
 
   def query
     case type
