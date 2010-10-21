@@ -1,6 +1,6 @@
 
 class Person < ActiveRecord::Base;
-  #reportable
+  reportable
 end
 
 class Hello < ActiveRecord::Base

@@ -8,4 +8,8 @@ class ReportsController < ApplicationController
       []
     end
   end
+
+  def columns
+    @reportable_columns = Reporter::ReportableColumns
+  end
 end

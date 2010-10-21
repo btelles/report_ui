@@ -14,5 +14,8 @@ describe "named route report_with_last_name_smith_path" do
     it "has routes for edit" do
       url_for(:host => 'a.com', :controller => 'reports', :action => 'edit', :id => 1).should == 'http://a.com/reports/1/edit'
     end
+    it 'has routes for columns' do
+      url_for(:host => 'a.com', :controller => 'reports', :action => 'columns', :report_id => 1).should == 'http://a.com/reports/1/columns'
+    end
   end
 end

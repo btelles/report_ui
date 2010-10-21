@@ -1,4 +1,5 @@
 class Report < ActiveRecord::Base
+
   def query
     case type
     when 'ruby'

@@ -2,7 +2,9 @@ module Reporter #:nodoc:
   module Routing #:nodoc:
     module MapperExtensions
         def reports
-          resources :reports
+          resources :reports do
+            get :columns
+          end
         end
     end
   end
