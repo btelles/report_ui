@@ -14,7 +14,7 @@ describe Report do
 
   describe "available_columns" do
     it "returns all columns and whether they are used or not" do
-      ::Reporter::ReportableColumns = [Person]
+      ::Reporter.reportable_models = [Person]
       a = Report.new()
       a.used_columns = ['Person#last_name', "Person#first_name"]
       a.available_columns.should == {Person => {:last_name     => true,
