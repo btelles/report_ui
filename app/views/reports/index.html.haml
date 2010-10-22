@@ -3,32 +3,14 @@
   %h2 Canned Reports
 
   -if reports.present?
-    %table
-      %thead
-        %tr
-          %th Name
-          %th Description
-      %tbody
-        -reports.each do |report|
-          %tr(class="#{cycle('odd','even')}" rel="#{report.id}")
-            %td=report.name
-            %td=report.description
+    =render 'reports_table', :reports => reports
   -else
     %p There are no canned reports
 
   %h2 Favorite Reports
 
   -if custom_reports.present?
-    %table
-      %thead
-        %tr
-          %th Name
-          %th Description
-      %tbody
-        -custom_reports.each do |report|
-          %tr(class="#{cycle('odd','even')}")
-            %td=report.name
-            %td=report.description
+    =render 'reports_table', :reports => custom_reports
   -else
     %p There are no custom reports.
   =link_to 'New Report', new_report_path, :class => 'button_button'

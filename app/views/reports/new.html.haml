@@ -1,2 +1,38 @@
-%h1 Creating a new report
-=render 'form'
+-semantic_form_for report, :html => {:class => 'bp'} do |f|
+  %h1 Creating a new report
+  #sidebar.span-4
+    %h3 Selected Options
+    =f.commit_button 'Run/Save'
+    #columns
+      %h4
+        Columns
+        =link_to "Edit", '#columns_editor', :class => 'local_dialog', :title => 'edit'
+      %ul
+        %li Click 'Edit' to add columns to the report.
+    #sorts
+      %h4
+        Sorts
+        =link_to "Edit", '#sorts_editor', :class => 'local_dialog'
+      %ul
+        %li Click 'Edit' to sort by one or more columns.
+    #filters
+      %h4
+        Filters
+        =link_to "Edit", '#filters_editor', :class => 'local_dialog'
+      %ul
+        %li Click 'Edit' to filter data in the report.
+    #schedule
+      %h4
+        Schedule
+        =link_to "Edit", '#schedule_editor', :class => 'local_dialog'
+      %ul
+        %li Click 'Edit' to create a schedule for this report to run automatically.
+    =f.commit_button 'Run/Save'
+  #content.span-20.last
+    =render 'form', :f => f
+  #hidden
+    #columns_editor
+      =render 'columns_editor'
+    #sorts_editor
+    #filters_editor
+    #schedule_editor

@@ -1,9 +1,2 @@
-%hr
-#sidebar
-  %h3 Selected Options
-  =render "report_details_edit"
-  %a.button_button(href="/report/run_or_save.html") Run/Save
-#content
-  -semantic_form_for report, :html => {:class => 'bp'} do |f|
-    -f.inputs :name => '' do
-      =f.input :name
+-f.inputs :name => '' do
+  =f.input :name

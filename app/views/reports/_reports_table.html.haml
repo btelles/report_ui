@@ -1,0 +1,10 @@
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+  %tbody
+    -reports.each do |report|
+      %tr(class="#{ cycle('odd', 'even') }")
+        %td=report.name
+        %td=report.description
