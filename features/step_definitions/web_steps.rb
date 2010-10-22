@@ -21,8 +21,11 @@ Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
-Given /^An? existing report with "([^"]*)" "([^"]*)"/ do |property, value|
-  @report = Report.make(property.to_sym => value)
+Given /^An? existing "([^"]*)" with "([^"]*)" "([^"]*)"/ do |model, property, value|
+  @current = instance_variable_set("@#{model}".to_sym, model.classify.constantize.make(property.to_sym => value))
+end
+Given /^with "([^"]*)" "(.*)"$/ do |property, value|
+  @current.update_attribute(property.to_sym, value)
 end
 When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)

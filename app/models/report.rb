@@ -18,4 +18,15 @@ class Report < ActiveRecord::Base
       Report.find_by_sql(code)
     end
   end
+
+
+  def column_names
+    used_columns.map do |full_col|
+      full_col.scan(/#(.*)/).flatten[0]
+    end
+  end
+
+  def data
+    eval code
+  end
 end

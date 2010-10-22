@@ -12,7 +12,7 @@ describe Report do
     end
   end
 
-  describe "available_columns" do
+  describe "#available_columns" do
     it "returns all columns and whether they are used or not" do
       ::Reporter.reportable_models = [Person]
       a = Report.new()
@@ -22,6 +22,23 @@ describe Report do
                                                 :id            => false,
                                                 :date_of_birth => false,
                                                 :amount        => false}}
+    end
+  end
+
+  describe "#column_names" do
+    it 'returns just the names of the intended columns' do
+      report = Report.new(:used_columns => ["Person#name", "SomeClass#date_at"])
+      report.column_names.should == ['name', 'date_at']
+    end
+  end
+
+  describe "#data" do
+    it "returns an executed query" do
+      Person.create(:last_name => 'smith')
+      Person.create(:last_name => 'roberts')
+      report = Report.new(:code => "Person.select('last_name').where('last_name = \"smith\"')")
+      report.data.map(&:last_name).should include 'smith'
+      report.data.map(&:last_name).should_not include 'roberts'
     end
   end
 end

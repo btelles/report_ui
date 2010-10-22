@@ -4,4 +4,9 @@
     %tr
       -report.used_columns.each do |column|
         %th=column
+  %tbody
+    -report.data.each do |data_row|
+      %tr
+        -report.column_names.each do |column_name|
+          %td=data_row.send(column_name)
 
