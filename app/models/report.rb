@@ -20,6 +20,10 @@ class Report < ActiveRecord::Base
   end
 
 
+  def humanized_column_names
+    column_names.map(&:humanize)
+  end
+
   def column_names
     used_columns.map do |full_col|
       full_col.scan(/#(.*)/).flatten[0]

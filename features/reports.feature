@@ -19,4 +19,5 @@ Feature: Manage reports
     And   An existing "person" with "last_name" "tommy"
     When I go to that report's page
     Then I should see "Tommy Test"
+    And  I should see "Last name"
     And  I should see "tommy" within "table"

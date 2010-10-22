@@ -2,7 +2,7 @@
 %table
   %thead
     %tr
-      -report.used_columns.each do |column|
+      -report.humanized_column_names.each do |column|
         %th=column
   %tbody
     -report.data.each do |data_row|

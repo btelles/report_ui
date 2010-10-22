@@ -25,6 +25,12 @@ describe Report do
     end
   end
 
+  describe "#humanized_column_names" do
+    it 'returns pretty names of the intended columns' do
+      report = Report.new(:used_columns => ["Person#name", "SomeClass#date_at"])
+      report.humanized_column_names.should == ['Name', 'Date at']
+    end
+  end
   describe "#column_names" do
     it 'returns just the names of the intended columns' do
       report = Report.new(:used_columns => ["Person#name", "SomeClass#date_at"])
