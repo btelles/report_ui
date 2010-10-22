@@ -1,9 +1,9 @@
 #columns
   %ul#models
-    -@available_columns.keys.each do |model|
+    -available_columns.keys.each do |model|
       %li
         =link_to model.name.underscore.humanize, "#columns_for_#{model.name}"
-  -@available_columns.each do |model, attrs|
+  -available_columns.each do |model, attrs|
     %div(id="columns_for_#{model.name}")
       -attrs.each do |attr_name, shown|
         %li

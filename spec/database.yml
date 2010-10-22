@@ -1,4 +1,4 @@
 sqlite3:
   :adapter: sqlite3
-  :dbfile: vendor/plugins/reporter/spec/db/reporter_plugin.sqlite3.db
-  :database: vendor/plugins/reporter/spec/db/reporter_plugin.sqlite3.db
+  :dbfile: vendor/plugins/reporter/db/reporter_plugin.sqlite3.db
+  :database: vendor/plugins/reporter/db/reporter_plugin.sqlite3.db
