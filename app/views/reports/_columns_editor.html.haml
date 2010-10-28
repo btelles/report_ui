@@ -7,4 +7,8 @@
     -attrs.each do |attr_name, shown|
       %li
         %label(for="#{model.name}#{attr_name}")= attr_name.to_s.humanize
-        =check_box_tag("#{model.name}_#{attr_name}", "#{model.name}: #{attr_name}", shown)
+        =check_box_tag("#{model.name}_#{attr_name}", "#{model.name}: #{attr_name.to_s.humanize}", shown)
+%br
+%button.button_button Ok
+
+%button.button_button Cancel

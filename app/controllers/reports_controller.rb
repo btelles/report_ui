@@ -12,4 +12,15 @@ class ReportsController < ApplicationController
   end
 
   expose(:available_columns) { report.available_columns }
+
+  def create
+    report = Report.new(params[:report])
+
+    if report.save
+      flash[:notice] = 'Report was successfully created.'
+      redirect_to(report)
+    else
+      render :action => "new"
+    end
+  end
 end

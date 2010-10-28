@@ -3,14 +3,14 @@
   %h2 Canned Reports
 
   -if reports.present?
-    =render 'reports_table', :reports => reports
+    =render 'reports/reports_table', :reports => reports
   -else
     %p There are no canned reports
 
   %h2 Favorite Reports
 
   -if custom_reports.present?
-    =render 'reports_table', :reports => custom_reports
+    =render 'reports/reports_table', :reports => custom_reports
   -else
     %p There are no custom reports.
   =link_to 'New Report', new_report_path, :class => 'button_button'

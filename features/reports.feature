@@ -22,10 +22,11 @@ Feature: Manage reports
     Given I am on the new report page
     Then  I should see "Creating a new report"
     When  I fill in "report_name" with "My new report"
-    And   I follow "edit" within "#columns"
+    And   I follow "Edit" within "#columns"
     And   I check "Person_last_name"
-    And   I press "ok"
-    And   I press "submit"
+    And   I press "Ok"
+    Then  the "Person_last_name" checkbox within "#columns_editor" should be checked
+    And   I press "Run/Save"
     Then  I should see "You've successfully created a report"
 
   Scenario: Viewing reports

@@ -5,6 +5,6 @@
       %th Description
   %tbody
     -reports.each do |report|
-      %tr(class="#{ cycle('odd', 'even') }")
+      %tr(class="#{ cycle('odd', 'even') }" rel="#{report.id}")
         %td=report.name
         %td=report.description

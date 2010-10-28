@@ -6,33 +6,33 @@
     #columns
       %h4
         Columns
-        =link_to "Edit", '#columns_editor', :class => 'local_dialog', :title => 'edit'
+        =link_to "Edit", '#columns_editor', :rel => 'toggle_within/#editors'
       %ul
         %li Click 'Edit' to add columns to the report.
     #sorts
       %h4
         Sorts
-        =link_to "Edit", '#sorts_editor', :class => 'local_dialog'
+        =link_to "Edit", '#sorts_editor'
       %ul
         %li Click 'Edit' to sort by one or more columns.
     #filters
       %h4
         Filters
-        =link_to "Edit", '#filters_editor', :class => 'local_dialog'
+        =link_to "Edit", '#filters_editor'
       %ul
         %li Click 'Edit' to filter data in the report.
     #schedule
       %h4
         Schedule
-        =link_to "Edit", '#schedule_editor', :class => 'local_dialog'
+        =link_to "Edit", '#schedule_editor'
       %ul
         %li Click 'Edit' to create a schedule for this report to run automatically.
     =f.commit_button 'Run/Save'
   #content.span-20.last
     =render 'form', :f => f
-  #hidden
-    #columns_editor
-      =render 'columns_editor'
-    #sorts_editor
-    #filters_editor
-    #schedule_editor
+    #editors
+      #columns_editor(style='display: none')
+        =render 'columns_editor'
+      #sorts_editor(style='display: none')
+      #filters_editor(style='display: none')
+      #schedule_editor(style='display: none')
