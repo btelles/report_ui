@@ -1,8 +1,8 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe Report do
-  subject = Report.new
   describe "requires at least one column" do
+    subject = Report.new
     subject.used_columns = nil
     subject.save.should == false
     subject.errors[:used_columns][0].should =~ /blank/
