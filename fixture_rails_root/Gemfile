@@ -6,6 +6,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'haml'
 gem 'formtastic'
 gem 'compass'
+gem 'orm_adapter'
 gem 'meta_search'
 gem 'decent_exposure', '~> 1.0.0.rc1'
 
