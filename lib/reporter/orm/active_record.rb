@@ -1,3 +1,4 @@
+require 'orm_adapter/adapters/active_record'
 module Reporter
   module Orm
     # This module contains some helpers and handle schema (migrations):
@@ -7,6 +8,7 @@ module Reporter
     #   end
     #
     module ActiveRecord
+
       module Schema
         include Reporter::Schema
 
@@ -18,6 +20,5 @@ module Reporter
     end
   end
 end
-
 ActiveRecord::ConnectionAdapters::Table.send :include, Reporter::Orm::ActiveRecord::Schema
 ActiveRecord::ConnectionAdapters::TableDefinition.send :include, Reporter::Orm::ActiveRecord::Schema
