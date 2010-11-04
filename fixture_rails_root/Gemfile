@@ -19,6 +19,7 @@ group :development, :test do
   gem 'nokogiri'
   gem 'capybara'
   gem 'capybara-envjs'
+  gem 'capybara-envjs-fixes'
   gem 'webrat'
   gem 'machinist'
 end
