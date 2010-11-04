@@ -14,6 +14,11 @@ class ReportsController < ApplicationController
 
   expose(:available_columns) { report.available_columns }
 
+  #def new; end
+  #def show; end
+  #def index; end
+  #def edit; end
+
   def create
     report = Report.new(params[:report])
 

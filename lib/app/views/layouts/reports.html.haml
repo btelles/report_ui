@@ -2,9 +2,9 @@
 %html
   %head
     %title Reports
-    =stylesheet_link_tag 'formtastic', 'formtastic_changes', 'jquery-ui', 'screen', :media =>  'screen, projection'
-    =stylesheet_link_tag 'print', :media => 'print'
-    = javascript_include_tag 'jquery.js','jquery-ui.min.js', 'application.js'
+    =stylesheet_link_tag 'reporter/formtastic', 'reporter/formtastic_changes', 'reporter/jquery-ui', 'reporter/screen', :media =>  'screen, projection'
+    =stylesheet_link_tag 'reporter/print', :media => 'print'
+    = javascript_include_tag 'reporter/jquery.js','reporter/jquery-ui.min.js', 'reporter/application.js'
     = csrf_meta_tag
   %body.bp
     #container
