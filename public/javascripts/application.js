@@ -57,7 +57,6 @@ function dialogs() {
   })
 }
 $(document).ready( function() {
-  $('body').append("<div id='new_id'><span>hello</span></div>");
    hoverDetailReports();
    dialogs();
    reporterEditor();
