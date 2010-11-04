@@ -21,9 +21,11 @@ require 'cucumber/web/tableish'
 require 'capybara/rails'
 require 'capybara/cucumber'
 require 'capybara/session'
+require 'capybara/envjs'
 
+Capybara.default_driver = :envjs
+Capybara.default_host= '127.0.0.1'
 Capybara.default_selector = :css
-Capybara.javascript_driver = :envjs
 ActionController::Base.allow_rescue = false
 Cucumber::Rails::World.use_transactional_fixtures = true
 

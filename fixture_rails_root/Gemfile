@@ -17,6 +17,7 @@ group :development, :test do
   gem 'cucumber-rails'
   gem 'nokogiri'
   gem 'capybara'
+  gem 'capybara-envjs'
   gem 'webrat'
   gem 'machinist'
 end
