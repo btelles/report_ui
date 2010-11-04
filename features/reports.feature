@@ -39,3 +39,7 @@ Feature: Manage reports
     And  I should see "Last name"
     And  I should see "tommy" within "table"
     And  I should see "My report's description"
+
+  Scenario: has a new div
+    Given I am on the new report page
+    Then  I should see "hello"
