@@ -1,4 +1,5 @@
 class ReportsController < ApplicationController
+  unloadable
   expose :report
 
   expose(:reports) { Report.all }
