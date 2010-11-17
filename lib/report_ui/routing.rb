@@ -1,4 +1,4 @@
-module Reporter #:nodoc:
+module ReportUi #:nodoc:
   module Routing #:nodoc:
     module MapperExtensions
         def reports
@@ -10,4 +10,4 @@ module Reporter #:nodoc:
   end
 end
 
-ActionDispatch::Routing::Mapper.send :include, Reporter::Routing::MapperExtensions
+ActionDispatch::Routing::Mapper.send :include, ReportUi::Routing::MapperExtensions

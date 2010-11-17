@@ -1,2 +1,2 @@
 # Install hook code here
-`rake reporter:install`
+`rake report_ui:install`

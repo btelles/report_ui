@@ -4,12 +4,12 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{reporter}
+  s.name = %q{report_ui}
   s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Bernardo Telles"]
-  s.date = %q{2010-11-04}
+  s.date = %q{2010-11-16}
   s.description = %q{Reporting engine for rails}
   s.email = %q{btelles@gmail.com}
   s.extra_rdoc_files = [
@@ -25,7 +25,6 @@ Gem::Specification.new do |s|
      "MIT-LICENSE",
      "README",
      "Rakefile",
-     "Reporter.gemspec",
      "VERSION",
      "features/reports.feature",
      "features/step_definitions/bernie_steps.rb",
@@ -54,7 +53,7 @@ Gem::Specification.new do |s|
      "fixture_rails_root/config/initializers/backtrace_silencers.rb",
      "fixture_rails_root/config/initializers/inflections.rb",
      "fixture_rails_root/config/initializers/mime_types.rb",
-     "fixture_rails_root/config/initializers/reporter.rb",
+     "fixture_rails_root/config/initializers/report_ui.rb",
      "fixture_rails_root/config/initializers/secret_token.rb",
      "fixture_rails_root/config/initializers/session_store.rb",
      "fixture_rails_root/config/locales/en.yml",
@@ -81,7 +80,7 @@ Gem::Specification.new do |s|
      "fixture_rails_root/test/performance/browsing_test.rb",
      "fixture_rails_root/test/test_helper.rb",
      "generators/USAGE",
-     "generators/reporter_generator.rb",
+     "generators/report_ui_generator.rb",
      "init.rb",
      "install.rb",
      "lib/app/controllers/reports_controller.rb",
@@ -99,13 +98,6 @@ Gem::Specification.new do |s|
      "lib/app/views/reports/show.js.erb",
      "lib/config/.routes.rb.swn",
      "lib/config/routes.rb",
-     "lib/reporter.rb",
-     "lib/reporter/engine.rb",
-     "lib/reporter/orm/active_record.rb",
-     "lib/reporter/routing.rb",
-     "lib/reporter/schema.rb",
-     "lib/tasks/reporter_tasks.rake",
-     "pkg/reporter-0.0.1.gem",
      "public/javascripts/.gitkeep",
      "public/javascripts/application.js",
      "public/javascripts/jquery-ui.min.js",
@@ -132,8 +124,28 @@ Gem::Specification.new do |s|
      "public/stylesheets/images/ui-icons_f9bd01_256x240.png",
      "public/stylesheets/jquery-ui.css",
      "public/stylesheets/print.css",
+     "public/stylesheets/report_ui/formtastic.css",
+     "public/stylesheets/report_ui/formtastic_changes.css",
+     "public/stylesheets/report_ui/ie.css",
+     "public/stylesheets/report_ui/images/ui-bg_flat_0_aaaaaa_40x100.png",
+     "public/stylesheets/report_ui/images/ui-bg_flat_55_fbec88_40x100.png",
+     "public/stylesheets/report_ui/images/ui-bg_glass_75_d0e5f5_1x400.png",
+     "public/stylesheets/report_ui/images/ui-bg_glass_85_dfeffc_1x400.png",
+     "public/stylesheets/report_ui/images/ui-bg_glass_95_fef1ec_1x400.png",
+     "public/stylesheets/report_ui/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png",
+     "public/stylesheets/report_ui/images/ui-bg_inset-hard_100_f5f8f9_1x100.png",
+     "public/stylesheets/report_ui/images/ui-bg_inset-hard_100_fcfdfd_1x100.png",
+     "public/stylesheets/report_ui/images/ui-icons_217bc0_256x240.png",
+     "public/stylesheets/report_ui/images/ui-icons_2e83ff_256x240.png",
+     "public/stylesheets/report_ui/images/ui-icons_469bdd_256x240.png",
+     "public/stylesheets/report_ui/images/ui-icons_6da8d5_256x240.png",
+     "public/stylesheets/report_ui/images/ui-icons_cd0a0a_256x240.png",
+     "public/stylesheets/report_ui/images/ui-icons_d8e7f3_256x240.png",
+     "public/stylesheets/report_ui/images/ui-icons_f9bd01_256x240.png",
+     "public/stylesheets/report_ui/jquery-ui.css",
+     "public/stylesheets/report_ui/print.css",
+     "public/stylesheets/report_ui/screen.css",
      "public/stylesheets/screen.css",
-     "reporter.gemspec",
      "spec/controllers/reports_controller_spec.rb",
      "spec/lib/models_spec.rb",
      "spec/models/report_spec.rb",
@@ -144,10 +156,10 @@ Gem::Specification.new do |s|
      "spec/views/reports/index.html.haml_spec.rb",
      "spec/views/reports/new.html.haml_spec.rb",
      "spec/views/reports/show.html.haml_spec.rb",
-     "tasks/reporter.rake",
+     "tasks/report_ui.rake",
      "uninstall.rb"
   ]
-  s.homepage = %q{http://github.com/btelles/reporter}
+  s.homepage = %q{http://github.com/btelles/report_ui}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}

@@ -1,4 +1,4 @@
-module Reporter
+module ReportUi
   class Engine < Rails::Engine
     paths.app.controllers     << "lib/app/controllers"
     paths.app.helpers         << "lib/app/helpers"

@@ -4,11 +4,11 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "reporter"
+    gem.name = "report_ui"
     gem.summary = %Q{Reporting engine for Rails}
     gem.description = %Q{Reporting engine for rails}
     gem.email = "btelles@gmail.com"
-    gem.homepage = "http://github.com/btelles/reporter"
+    gem.homepage = "http://github.com/btelles/report_ui"
     gem.authors = ["Bernardo Telles"]
     gem.add_development_dependency "rspec", "= 2.0.1"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings

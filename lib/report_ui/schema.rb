@@ -1,4 +1,4 @@
-module Reporter
+module ReportUi
   module Schema
 
     def reporter(options={})

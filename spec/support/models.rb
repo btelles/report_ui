@@ -4,4 +4,4 @@ end
 
 # Initializer part:
 
-::Reporter.reportable_models = [Person]
+::ReportUi.reportable_models = [Person]

@@ -1,5 +1,5 @@
 require 'orm_adapter/adapters/active_record'
-module Reporter
+module ReportUi
   module Orm
     # This module contains some helpers and handle schema (migrations):
     #
@@ -10,7 +10,7 @@ module Reporter
     module ActiveRecord
 
       module Schema
-        include Reporter::Schema
+        include ReportUi::Schema
 
         # Tell how to apply schema methods.
         def apply_reporter_schema(name, type, options={})
@@ -20,5 +20,5 @@ module Reporter
     end
   end
 end
-ActiveRecord::ConnectionAdapters::Table.send :include, Reporter::Orm::ActiveRecord::Schema
-ActiveRecord::ConnectionAdapters::TableDefinition.send :include, Reporter::Orm::ActiveRecord::Schema
+ActiveRecord::ConnectionAdapters::Table.send :include, ReportUi::Orm::ActiveRecord::Schema
+ActiveRecord::ConnectionAdapters::TableDefinition.send :include, ReportUi::Orm::ActiveRecord::Schema
