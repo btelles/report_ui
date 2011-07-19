@@ -1,25 +1,34 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0'
+gem 'rails', '3.1.0.rc4'
 
-gem 'sqlite3-ruby', :require => 'sqlite3'
+# Bundle edge Rails instead:
+# gem 'rails',     :git => 'git://github.com/rails/rails.git'
+
+gem 'sqlite3'
+
+# Asset template engines
+gem 'sass-rails', "~> 3.1.0.rc"
+gem 'coffee-script'
+gem 'uglifier'
+
+gem 'jquery-rails'
+
 gem 'haml'
 gem 'formtastic'
 gem 'compass'
 gem 'orm_adapter'
 gem 'meta_search'
-gem 'decent_exposure', '~> 1.0.0.rc1'
+gem 'decent_exposure', '~> 1.0.0'
 
 group :development, :test do 
-  gem 'ruby-debug'
+  gem 'ruby-debug19'
   gem 'rspec'
   gem 'rspec-rails'
   gem 'cucumber'
   gem 'cucumber-rails'
   gem 'nokogiri'
   gem 'capybara'
-  gem 'capybara-envjs'
-  gem 'capybara-envjs-fixes'
+  gem 'capybara-webkit'
   gem 'webrat'
-  gem 'machinist'
 end
