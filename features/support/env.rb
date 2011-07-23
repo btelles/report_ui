@@ -7,22 +7,19 @@ def load_schema
   db_adapter = 'sqlite3'
   ActiveRecord::Base.establish_connection(config[db_adapter])
   load(File.dirname(__FILE__) + '/../../fixture_rails_root/db/schema.rb')
-  #require File.dirname(__FILE__) + '/../../init'
+  require File.expand_path('../../../lib/report_ui', __FILE__)
 end
 
 load_schema
 require File.dirname(__FILE__) + '/models'
 require File.dirname(__FILE__) + '/blueprints'
-#require 'cucumber/formatter/unicode' # Remove this line if you don't want Cucumber Unicode support
-#require 'cucumber/rails/world'
-#require 'cucumber/rails/active_record'
-#require 'cucumber/web/tableish'
+require 'cucumber/formatter/unicode' # Remove this line if you don't want Cucumber Unicode support
+require 'cucumber/rails/world'
+require 'cucumber/web/tableish'
 
 require 'capybara/rails'
 require 'capybara/cucumber'
 require 'capybara/session'
-#require 'capybara/envjs'
-#require 'capybara_envjs_fixes/cucumber_fixes'
 
 Capybara.default_driver = :webkit
 #Capybara.default_host= '127.0.0.1'
