@@ -11,6 +11,7 @@ module NavigationHelpers
 
     send((resource_type+'_path').to_sym, self.instance_variable_get("@#{resource_type}".to_sym))
   end
+
   def path_to(page_name)
     case page_name
 
@@ -29,7 +30,9 @@ module NavigationHelpers
       begin
         page_name =~ /the (.*) page/
         path_components = $1.split(/\s+/)
-        self.send(path_components.push('path').join('_').to_sym)
+        routes = Rails.application.routes
+        path = path_components.join('_').to_sym
+        routes.named_routes[path].path.gsub(/\(.*\)/,'')
       rescue Object => e
         raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
           "Now, go and add a mapping in #{__FILE__}"
