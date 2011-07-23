@@ -1,9 +1,10 @@
 module ReportUi
   class Engine < Rails::Engine
-    STDOUT.puts File.expand_path("../../public", __FILE__)
-    initializer "engine.static_assets" do |app|
-      STDOUT.puts 'hello*******************'
-      app.middleware.use ::ActionDispatch::Static, File.expand_path("../public", __FILE__)
+    initializer "sprockets.set_configs", :after => "action_controller.set_configs" do |app|
+      app.config.assets.enabled= true
+      ActiveSupport.on_load(:action_controller) do
+        self.use_sprockets = app.config.assets.enabled
+      end
     end
   end
 end
