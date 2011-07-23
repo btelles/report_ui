@@ -11,6 +11,9 @@ gem 'meta_search'
 gem 'decent_exposure', '~> 1.0.0.rc1'
 gem 'report_ui', :path => File.expand_path('../..', __FILE__)
 group :development, :test, :cucumber do 
+  gem 'awesome_print'
+  gem 'wirble'
+  gem 'what_methods'
   gem 'ruby-debug19'
   gem 'rspec'
   gem 'rspec-rails'
