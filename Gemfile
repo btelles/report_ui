@@ -2,7 +2,6 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.0.rc4'
 gem 'bundler', '~> 1.0.0'
-gem 'orm_adapter'
 gem 'jeweler', '~> 1.4.0'
 gem 'haml'
 gem 'compass'

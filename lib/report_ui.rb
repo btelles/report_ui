@@ -1,8 +1,5 @@
-require 'orm_adapter'
-require 'report_ui/routing'
-require 'report_ui/schema'
-require 'report_ui/orm/active_record'
-require 'report_ui/engine'
+require File.expand_path('../report_ui/schema', __FILE__)
+require File.expand_path('../report_ui/engine', __FILE__)
 module ReportUi
   mattr_accessor :reportable_models
   @@reportable_models = []
