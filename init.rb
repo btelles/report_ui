@@ -1,3 +1,3 @@
 # Include hook code here
 
-require 'reporter'
+require 'report_ui'

@@ -3,7 +3,7 @@ class Report < ActiveRecord::Base
   validates_presence_of :used_columns
 
   def available_columns
-    ::Reporter.reportable_models.inject({}) do |result, model|
+    ::ReportUi.reportable_models.inject({}) do |result, model|
       result.merge(model => model.columns.inject({}) do |model_attrs, attr|
         model_attrs.merge(attr.name.to_sym => ((self.used_columns || []).include?("#{model.name}##{attr.name}")))
       end)

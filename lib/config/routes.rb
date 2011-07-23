@@ -1,7 +1,6 @@
- Rails.application.routes.draw do |map|
-   reports
-   #resources :reports do
-   #  get :columns
-   #end
- end
+Rails.application.routes.draw do
+  resources :reports do
+    get :columns
+  end
+end
 

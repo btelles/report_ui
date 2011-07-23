@@ -1,9 +1,8 @@
 source 'http://rubygems.org'
 
+gem 'rails', '3.1.0.rc4'
 gem 'bundler', '~> 1.0.0'
 gem 'orm_adapter'
-gem 'actionpack', '~> 3.0.0'
-gem 'activesupport', '~> 3.0.0'
 gem 'jeweler', '~> 1.4.0'
 gem 'haml'
 gem 'compass'
@@ -22,7 +21,8 @@ group :development, :test do
   gem 'nokogiri'
   gem 'webrat'
   gem 'capybara'
-  gem 'capybara-envjs'
-  gem 'ruby-debug'
+  gem 'capybara-webkit', '1.0.0.beta4'
+  gem 'ruby-debug19'
   gem 'machinist'
+  gem 'sqlite3'
 end

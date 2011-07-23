@@ -18,7 +18,7 @@ require 'webrat'
 require 'webrat/core/matchers'
 
 $: << File.expand_path(File.dirname(__FILE__) + '/../lib/')
-require 'reporter'
+require 'report_ui'
 RSpec.configure do |config|
   config.mock_with :rspec
   config.use_transactional_fixtures = true

@@ -1,25 +1,24 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0'
+gem 'rails', '3.1.0.rc4'
 
-gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'sqlite3'
 gem 'haml'
-gem 'formtastic'
 gem 'compass'
 gem 'orm_adapter'
+gem 'formtastic'
 gem 'meta_search'
 gem 'decent_exposure', '~> 1.0.0.rc1'
-
-group :development, :test do 
-  gem 'ruby-debug'
+gem 'report_ui', :path => File.expand_path('../..', __FILE__)
+group :development, :test, :cucumber do 
+  gem 'ruby-debug19'
   gem 'rspec'
   gem 'rspec-rails'
   gem 'cucumber'
   gem 'cucumber-rails'
   gem 'nokogiri'
   gem 'capybara'
-  gem 'capybara-envjs'
-  gem 'capybara-envjs-fixes'
+  gem 'capybara-webkit'
   gem 'webrat'
   gem 'machinist'
 end
